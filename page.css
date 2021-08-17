@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --color: #FFA101;
+    --colorLight: #FAE6B1;
+    --colorLightBlue: #B3DEE5;
+    --colorBlue: #31525B;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--colorBlue);
+}
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    background: var(--colorBlue);
+    z-index: 1000;
+}
+header h1 {
+    color: var(--colorLight);
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--colorLightBlue);
+    text-decoration: none;
+}
+nav a:hover {
+    color: var(--colorLight);
+    text-shadow: 0 0 5px var(--color);
+}
+
+#landing {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#landing .text {
+    padding: 30px;
+    z-index: 3;
+}
+#landing .text h2 {
+    color: var(--color);
+    font-size: 6em;
+    text-shadow: -2px 2px 0 #FFFFFF,
+                2px 2px 0 #FFFFFF,
+                2px -2px 0 #FFFFFF,
+                -2px -2px 0 #FFFFFF;
+}
+#landing .grayout {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 2;
+}
+#imgLanding {
+    width: 100%;
+    height: 100%;
+    background: url(landing.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+}
